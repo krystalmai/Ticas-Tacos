@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Mai Ngoc Tuyet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Order &#124; Tica's Tacos</title>
+</head>
+
+<body>
+
+    <!-- Main -->
+    <main id="register">
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a class="current" href="order.html">Order Now</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="container">
+            <div id="form-pic"></div>
+            <div id="order-form">
+                <h1>Order Details</h1>
+                <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" id="form" class="form">
+
+                    <div class="form-control" id="feature3">
+                        <span class="label">Delivery or Pick-up?</span>
+                        <label for="delivery">Delivery</label>
+                        <input id="delivery" type="radio" name="del/pick" value="Delivery" onchange="showDeliveryInfo()">
+                        <label for="pickup">Pick up</label>
+                        <input id="pickup" type="radio" name="del/pick" value="Pickup" onchange="hideDeliveryInfo()">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+                    <div class="form-control" id="addr-container">
+
+                        <input id="address" type="text" name="address" placeholder="Delivery Address">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+
+
+
+                    <div class="form-control" id="bill-addr-container">
+
+                        <input id="bill-address" type="text" name="billing address" placeholder="Billing Address">
+
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                        <div id="same-container">
+                            <input type="checkbox" id="same" name="same" value="yes" onchange="autofill()">
+                            <label for="same">Same as delivery address</label>
+                        </div>
+
+
+                    </div>
+                    <div class="form-control" id="postcode-container">
+
+                        <input id="postcode" type="tel" name="postcode" placeholder="Postcode (4 digits)">
+
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input id="phone" type="tel" name="phone" placeholder="Phone Number">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input id="email" type="email" name="email" placeholder="Email">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control" id="feature4">
+                        <span class="label">Payment method:</span>
+                        <label for="onpickup">On pick-up</label>
+                        <input id="onpickup" type="radio" name="paymethod" value="onpickup" onchange="hideCard()">
+                        <label for="online">Online</label>
+                        <input id="online" type="radio" name="paymethod" value="online" onchange="showCard()">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+                    <div id="card-container">
+                        <div class="form-control" >
+                            <label for="card">Please select type of card:</label>
+
+                            <select name="card" id="card">
+                                <option value="">--Choose card--</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="visa">Visa</option>
+                                <option value="american-express">American Express</option>
+                            </select>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+
+                        <div class="form-control">
+                            <input id="card-number" type="tel" name="card-number" placeholder="Card Number">
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <input id="card-expires" type="tel" name="card-expires" placeholder="MM/YY">
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <input id="card-cvc" type="tel" name="card-cvc" placeholder="CVV/CVC">
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+
+                    <button type="reset">Reset
+                    </button>
+                    <button type="submit">Order
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" src="img/logo.png" alt="logo">
+        <section id="contact">
+            <h3>Contact</h3>
+            <address>
+                Call: +84(947826713)<br>
+                Address: 24 Rue des Chats, Mouseville <br>
+                Open everyday 11am &#45; 10pm
+            </address>
+        </section>
+
+        <div class='social'>
+            <a href="mailto:krystalmai00@gmail.com" class="btn gmail"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.facebook.com/krystalmai.mai/" class="btn fb" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/krys.the.cat/" class="btn ig" target="_blank"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+        <span>&copy; Tica's Tacos 2021</span>
+
+    </footer>
+    <script src="js/orderscript.js"></script>
+
+</body>
+
+</html>

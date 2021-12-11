@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Mai Ngoc Tuyet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Register &#124; Tica's Tacos</title>
+</head>
+
+<body>
+
+    <!-- Main -->
+    <main id="register">
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="current" href="register.html">Register</a></li>
+                <li><a href="order.html">Order Now</a></li>
+                <li><a href="features.html">Features</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="container">
+            <div id="form-pic"></div>
+            <div id="reg-form">
+                <h1>Registration Form</h1>
+                <form action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" class="form" id="form">
+
+                    <div class="form-control">
+
+                        <input id="fname" type="text" name="fname" placeholder="First name">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <input id="lname" type="text" name="lname" placeholder="Last name">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+
+
+                    <div class="form-control">
+
+                        <input id="uname" type="text" name="username" placeholder="Username">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+                    <div class="form-control">
+
+                        <input id="pwd1" type="password" name="pwd1" placeholder="Password (at least 8 characters)">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+
+                    </div>
+
+                    <div class="form-control">
+                        <input id="pwd2" type="password" name="pwd2" placeholder="Retype Password">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <span class="label">Gender:</span>
+
+                        <label for="genm">Male</label>
+                        <input id="genm" type="radio" name="gender" value="M">
+                        <label for="genf">Female</label>
+                        <input id="genf" type="radio" name="gender" value="F">
+
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <span class="label">Your favorite taco filling&#40;s&#41;:</span>
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                        <br>
+
+                        <input type="checkbox" id="taco1" name="taco1" value="beef">
+                        <label for="taco1">Shredded Beef</label><br>
+
+
+
+                        <input type="checkbox" id="taco2" name="taco2" value="chicken">
+                        <label for="taco2">Chicken Fajita</label><br>
+
+
+                        <input type="checkbox" id="taco3" name="taco3" value="duck">
+                        <label for="taco3">Duck Curry</label><br>
+
+
+                        <input type="checkbox" id="taco4" name="taco4" value="pork">
+                        <label for="taco4">Pork</label>
+
+
+                    </div>
+
+
+                    <div class="form-control">
+                        <label for="shell">Your favorite type of shell:</label>
+
+                        <select name="shell" id="shell">
+                            <option value="">--Choose shell--</option>
+                            <option value="soft">Soft shell</option>
+                            <option value="hard">Hard shell</option>
+                            <option value="both">I like both</option>
+
+                        </select>
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+
+                    <button type="reset">Reset
+                    </button>
+                    <button type="submit">Register
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <img class="logo" src="img/logo.png" alt="logo">
+        <section id="contact">
+            <h3>Contact</h3>
+            <address>
+                Call: +84(947826713)<br>
+                Address: 24 Rue des Chats, Mouseville <br>
+                Open everyday 11am &#45; 10pm
+            </address>
+        </section>
+
+        <div class='social'>
+            <a href="mailto:krystalmai00@gmail.com" class="btn gmail"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.facebook.com/krystalmai.mai/" class="btn fb" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/krys.the.cat/" class="btn ig" target="_blank"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+        <span>&copy; Tica's Tacos 2021</span>
+
+    </footer>
+    <script src="js/regscript.js"></script>
+
+</body></html>
